@@ -1,0 +1,193 @@
+@import './fonts.scss';
+
+.container-4 {
+	width: 100%;
+	max-width: 1160px;
+	aspect-ratio: 2.32;
+	background-color: #ED0233;
+	margin: 120px auto;
+	display: flex;
+	justify-content: space-between;
+
+	.super-games {
+		font-family: $bebas-neue;
+		width: 100%;
+		max-width: 201px;
+		font-weight: 400;
+		font-size: 90px;
+		letter-spacing: 0.03em;
+		color: #fff;
+		margin-left: 75px;
+		margin-top: 65px;
+
+		&__subtitle {
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 150%;
+			color: #fff;
+			margin-top: -80px;
+			margin-left: 77px;
+		}
+	}
+
+	.super-games__props {
+		height: 250px;
+		margin-left: -125px;
+	}
+
+	.super-games__date {
+		list-style-type: none;
+		width: 100%;
+		max-width: 64px;
+		height: 100px;
+		margin-top: 80px;
+		margin-left: 11px;
+
+		&__props {
+			display: flex;
+			font-family: $roboto-condensed;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 150%;
+			color: #fff;
+
+			&__date {
+				font-weight: 700;
+				font-size: 40px;
+				line-height: 150%;
+				color: #fff;
+				display: flex;
+				align-items: center;
+
+				&__props {
+					margin-left: 7px;
+					display: flex;
+					flex-direction: column;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 150%;
+					color: #fff;
+				}
+			}
+
+			span {
+				height: 1px;
+				width: 100%;
+				background-color: #fff;
+			}
+		}
+	}
+
+	.super-games__time {
+		list-style-type: none;
+		width: 100%;
+		max-width: 88px;
+		margin-left: 10px;
+		margin-top: -21px;
+
+		&__inner {
+			display: flex;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 150%;
+			color: #fff;
+
+			span {
+				height: 1px;
+				width: 100%;
+				background-color: #fff;
+			}
+		}
+
+		&__inner:nth-child(3) {
+			font-size: 40px;
+			font-weight: 700;
+		}
+	}
+
+	.anketa__button {
+		width: 100%;
+		max-width: 345px;
+		height: 72px;
+		flex-shrink: 0;
+		margin-left: 75px;
+		margin-top: 45px;
+		background-color: transparent;
+		border: 4px solid white;
+		cursor: pointer;
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 0.5;
+		}
+
+		&__title {
+			font-family: $roboto-condensed;
+			font-weight: 700;
+			font-size: 12px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			color: #fff;
+		}
+	}
+
+}
+
+@media (max-width:768px) {
+	.container-4 {
+
+		.anketa__button {
+			margin-left: 25px;
+		}
+
+		.super-games {
+			font-size: 52px;
+			margin-left: 45px;
+			margin-top: 50px;
+
+			&__subtitle {
+				font-size: 12px;
+				margin-top: -50px;
+				margin-left: 45px;
+			}
+
+			&__props {
+				margin-left: -140px;
+				margin-top: -60px;
+
+			}
+
+			&__date {
+				&__props {
+					font-size: 12px;
+
+					&__date {
+						font-size: 24px;
+					}
+				}
+			}
+
+			&__time {
+				&__inner {
+					font-size: 12px;
+				}
+
+				&__inner:nth-child(3) {
+					font-size: 24px;
+				}
+			}
+		}
+	}
+
+}
+
+@media (max-width:320px) {
+	.container-4{
+		flex-direction: column;
+
+		.super-games__props{
+			margin-left: 205px;
+			margin-top: -360px;
+		}
+	}
+}

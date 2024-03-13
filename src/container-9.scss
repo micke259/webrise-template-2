@@ -1,0 +1,171 @@
+@import './fonts.scss';
+
+.container-9 {
+	width: 100%;
+	max-width: 1366px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	margin-top: 120px;
+
+	.free {
+		width: 100%;
+		max-width: 683px;
+		background-color: #102654;
+		height: 337px;
+
+		&__button {
+			margin-top: 37px;
+			max-width: 410px;
+			height: 53px;
+			width: 100%;
+			border: 3px solid #fff;
+			outline: none;
+			cursor: pointer;
+			background-color: transparent;
+			color: #fff;
+			transition: opacity 0.3s ease;
+
+			&:hover {
+				opacity: 0.5;
+			}
+
+		}
+
+		&__inner {
+			width: 100%;
+			margin: 65px auto;
+			max-width: 410px;
+		}
+
+		&__title {
+			font-weight: 400;
+			font-size: 49px;
+			font-family: $bebas-neue;
+			letter-spacing: 0.03em;
+			color: #fff;
+			margin-block-start: 0;
+			margin-block-end: 0;
+		}
+
+		&__inner__inputs {
+			display: flex;
+			margin-top: 43px;
+			gap: 30px;
+		}
+
+		&__inner__input {
+			background-color: transparent;
+			border: none;
+			outline: none;
+			border-bottom: 1px solid #74819C;
+			color: #fff;
+
+			&::placeholder {
+				font-family: $roboto-condensed;
+				font-weight: 400;
+				font-size: 14px;
+				color: #fff;
+			}
+		}
+	}
+
+	.contacts {
+		width: 100%;
+		max-width: 683px;
+		border-top: 1px solid #74819c;
+
+		&__inner {
+			width: 100%;
+			max-width: 404px;
+			margin: 65px auto;
+
+		}
+
+		&__title {
+			font-family: $bebas-neue;
+			font-weight: 500;
+			font-size: 49px;
+			letter-spacing: 0.03em;
+			color: #102654;
+		}
+
+		&__props {
+			margin-top: 42px;
+			display: flex;
+			gap: 60px;
+
+			&__title {
+				font-weight: 700;
+				font-size: 16px;
+				color: #102654;
+				margin-block-start: 0;
+				margin-block-end: 0;
+			}
+
+			&__subtitle {
+				font-weight: 400;
+				font-size: 14px;
+				color: #102654;
+				margin-top: 10px;
+				text-decoration: none;
+				transition: opacity 0.3s ease;
+				&:hover{
+					opacity: 0.5;
+				}
+			}
+
+			&__divider {
+				width: 100%;
+				width: 1px;
+				height: 102px;
+				border: 1px solid #74819c;
+
+			}
+		}
+
+	}
+}
+
+@media (max-width:768px) {
+	.container-9{
+		flex-direction: column;
+		.free{
+			max-width: 100%;
+		}
+	}
+}
+
+@media (max-width:320px) {
+	.container-9{
+		.free {
+
+			&__title{
+				font-size: 32px;
+			}
+
+			&__inner {
+					margin: 65px 5px;
+					&__inputs{
+						flex-direction: column;
+					}
+				}
+		}
+
+		.contacts{
+			margin: 0 5px;
+			border-top: none;
+			&__props{
+				flex-direction: column;
+				gap: 10px;
+				&__divider{
+					display: none;
+				}
+
+				&__title{
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

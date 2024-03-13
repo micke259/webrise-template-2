@@ -1,0 +1,62 @@
+@import './fonts.scss';
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+
+}
+
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: $roboto-condensed;
+	margin: 0;
+}
+
+p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+.container-wrapper {
+	width: 100%;
+	margin: 0 auto;
+	background-image: url('assets/bg-container-1.jpg');
+	background-repeat: no-repeat;
+}
+
+.container-3-wrapper {
+	margin-top: 57px;
+	width: 100%;
+	background-color: #F8F9FC;
+}
+
+.container-6-wrapper{
+	width: 100%;
+	background-color: #F8F9FC;
+	margin-top: 200px;
+}
+
+
+@import './container.scss';
+
+@import './container-2.scss';
+
+@import './container-3.scss';
+
+@import './container-4.scss';
+
+@import './container-5.scss';
+
+@import './container-6.scss';
+
+@import './container-7.scss';
+
+@import './container-8.scss';
+
+@import './container-9.scss';
+
+@import './footer.scss'

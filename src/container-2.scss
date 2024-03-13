@@ -1,0 +1,104 @@
+.container-2 {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1160px;
+	min-height: 700px;
+	display: grid;
+	background-image: url('assets/zal.jpg');
+	background-repeat: no-repeat;
+	background-position: right 40%;
+
+	.player{
+		width: 364px;
+		height: 228px;
+		flex-shrink: 0;
+		z-index: 1;
+		align-self: center;
+		justify-self: center;
+		margin-top: -258px;
+		margin-left: 75px;
+	}
+	.training {
+		display: flex;
+		flex-direction: column;
+		margin-top: 160px;
+		margin-left: 59px;
+	}
+
+	.training__title {
+		font-family: 'Bebas Neue', sans-serif;
+		font-weight: 700;
+		font-size: 49px;
+		letter-spacing: 0.03em;
+		color: #102654;
+		font-stretch: 50%;
+	}
+
+	.training__subtitle {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 150%;
+		color: #102654;
+		margin-top: 10px;
+	}
+
+	.gym__text {
+		width: 355px;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 150%;
+		color: #102654;
+		margin-top: 40px;
+	}
+	.gym__text-2{
+		width: 355px;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 150%;
+		color: #102654;
+		margin-top: 7px;
+	}
+}
+
+@media (max-width:768px) {
+
+	.container-2{
+		.training{
+			margin-top: 100px;
+			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
+		}
+		.gym__text, .gym__text-2{
+			width: 100%;
+			max-width: 502px;
+			margin-bottom: 60rem;
+		}
+
+		.gym__text-2{
+			display: none;
+		}
+	}
+	
+}
+
+@media (max-width:320px) {
+	.container-2{
+		display: block;
+		.training{
+			text-align: start;
+			margin-top: 50px;
+			margin-right: 5px;
+			margin-left: 5px;
+			&__title{
+				font-size: 32px;
+			}
+		}
+		.gym__text{
+			max-width: 320px;
+		}
+		.player{
+			margin-left: 0px;
+		}
+	}
+}
