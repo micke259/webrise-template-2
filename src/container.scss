@@ -5,9 +5,11 @@
 	max-width: 1160px;
 	margin: 0 auto;
 	min-height: 658px;
-	background-image: url('assets/man.jpg');
-	background-repeat: no-repeat;
-	background-position: 64.8% 51%;
+
+	.man__picture{
+		margin-top: -15px;
+		margin-left: 84px;
+	}
 
 	.icons__list{
 		display: none;
@@ -33,8 +35,7 @@
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		color: #fff;
-		margin-right: 99px;
-		margin-top: 47px;
+
 		font-family: 'Roboto Condensed', sans-serif;
 		transition: opacity 0.3s ease;
 		&:hover{
@@ -73,13 +74,12 @@
 		}
 	}
 
-	.blockquote__container {
+	.text__container {
 		width: 100%;
 		display: flex;
 		min-height: 570px;
 		align-items: center;
 		position: relative;
-		
 
 		.subtitle {
 			width: 100%;
@@ -89,23 +89,20 @@
 			line-height: 150%;
 			text-align: right;
 			color: #fff;
+			margin-top: 99px;
 			margin-left: 18px;
-			margin-top: 69px;
-			margin-right: -95px;
 		}
 
 		.blockquote {
 			display: flex;
 			flex-direction: column;
 			width: 100%;
-			max-width: 420px;
+			max-width: 298px;
 			align-items: flex-end;
-			justify-content: flex-start;
 			margin-bottom: 88px;
-
+			margin-left: -53px;
 			.location {
 				font-family: $bebas-neue;
-				margin-right: 98px;
 				font-weight: 400;
 				font-size: 49px;
 				letter-spacing: 0.03em;
@@ -119,7 +116,6 @@
 				font-style: normal;
 				font-size: 109px;
 				text-align: right;
-				margin-right: 120px;
 				color: #fff;
 				text-shadow: 0 4px 4px rgba(0,0,0,0.25)
 			}
@@ -127,11 +123,16 @@
 	}
 }
 
+@media (max-width:1000px) {
+	.container{
+		.man__picture{
+			margin-left: auto;
+		}
+	}	
+}
+
 @media (max-width: 768px)  {
 	.container{
-		background-image: url('assets/man_768.jpg');
-		background-position: right;
-		max-width: 678px;
 		
 		.blockquote__container{
 			.blockquote{

@@ -1,18 +1,25 @@
 import './index.scss'
+//@ts-ignore
+import Swiper from 'swiper/bundle'
+import {SwiperOptions} from 'swiper/types'
+import { Navigation } from 'swiper/modules';
 
-const initSlider = () =>{
-	const coachesList = document.querySelector('.container-5 .coaches__list')
-	const slideButtons = document.querySelectorAll('.container-5 .slide-button')
+
+
+const params:SwiperOptions = {
+	slidesPerView:4,
+	speed:200,
+	loop:true,
+	navigation: {
+		nextEl: '.swiper-button-next',
+    	prevEl: '.swiper-button-prev',
+  	},
 
 	
 
-	slideButtons.forEach(button =>{
-		button.addEventListener('click', ()=>{
-			const direction = button.id === 'prev-slide' ? -1: 1;
-			const scrollAmount = coachesList.clientWidth * direction;
-			coachesList.scrollBy({left: scrollAmount, behavior:'smooth'})
-		})
-	})
+	watchOverflow:false,
+  	modules:[Navigation],
 }
 
-window.addEventListener('load', initSlider)
+const swiper = new Swiper('.coaches__list', params);
+

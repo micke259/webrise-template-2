@@ -3,11 +3,18 @@
 .container-4 {
 	width: 100%;
 	max-width: 1160px;
-	aspect-ratio: 2.32;
 	background-color: #ED0233;
 	margin: 120px auto;
 	display: flex;
 	justify-content: space-between;
+
+	.super-games__wrapper {
+		aspect-ratio: 1;
+	}
+
+	.powder {
+		aspect-ratio: 1.32;
+	}
 
 	.super-games {
 		font-family: $bebas-neue;
@@ -182,10 +189,10 @@
 }
 
 @media (max-width:320px) {
-	.container-4{
+	.container-4 {
 		flex-direction: column;
 
-		.super-games__props{
+		.super-games__props {
 			margin-left: 205px;
 			margin-top: -360px;
 		}

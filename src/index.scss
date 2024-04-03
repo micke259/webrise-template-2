@@ -1,19 +1,16 @@
 @import './fonts.scss';
 
-* {
-	box-sizing: border-box;
-	padding: 0;
-
-}
-
-*::before,
-*::after {
-	box-sizing: inherit;
+html,
+body {
+	font-family: $roboto-condensed;
+	position: relative;
+	height: 100%;
 }
 
 body {
-	font-family: $roboto-condensed;
 	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 p {
@@ -34,7 +31,7 @@ p {
 	background-color: #F8F9FC;
 }
 
-.container-6-wrapper{
+.container-6-wrapper {
 	width: 100%;
 	background-color: #F8F9FC;
 	margin-top: 200px;

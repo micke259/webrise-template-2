@@ -10,9 +10,13 @@
 	grid-template-rows: 0.25fr 0.25fr 1fr;
 	grid-template-columns: 1fr;
 
-	background-image: url('assets/dude.png');
-	background-repeat: no-repeat;
-	background-position: 100% 150%;
+	position: relative;
+
+	.dude{
+		position: absolute;
+		bottom: -150px;
+		right: 0;
+	}
 
 	.abonements__title {
 		display: flex;
@@ -88,6 +92,9 @@
 			transition: 0.3s;
 			background-color: #fff;
 
+			z-index: 2;
+
+			border: 6px solid #fff;
 			&:hover {
 				border-image: linear-gradient(#D10A42, #00359F) 30;
 				border-width: 6px;
