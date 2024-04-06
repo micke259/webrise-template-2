@@ -120,6 +120,11 @@
 			letter-spacing: 0.05em;
 			text-transform: uppercase;
 			color: #1c3374;
+			transition: opacity .3s ease;
+
+			&:hover{
+				opacity: 0.5;
+			}
 		}
 	}
 }

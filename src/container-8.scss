@@ -9,22 +9,7 @@
 	align-items: center;
 	margin-top: 110px;
 	position: relative;
-	.reply-button {
-		border: none;
-		outline: none;
-		position: absolute;
-		cursor: pointer;
-		background-color: transparent;
-	}
-
-	.reply-button#prev-slide{
-		left: -16px;
-		transform: translateY(565%);
-	}
-	.reply-button#next-slide{
-		right: -18px;
-		transform: translateY(565%);
-	}
+	
 
 	&__title {
 		font-family: $bebas-neue;
@@ -36,41 +21,52 @@
 		margin-block-end: 0;
 	}
 
-	.replies {
-		width: 100%;
-		max-width: 560px;
-		background-color: #1c3374;
-		margin-top: 50px;
+	.replies{
 		height: 242px;
-		box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
-		&__inner {
-			margin: 62px auto;
-			display: flex;
-			align-items: flex-start;
-			width: 100%;
-			max-width: 436px;
-		}
+	}
 
-		.reply__title {
-			font-weight: 700;
-			font-size: 20px;
-			line-height: 100%;
-			color: #fff;
-			margin-block-start: 0;
-			margin-block-end: 0;
-		}
+	// .replies {
+	// 	width: 100%;
+	// 	max-width: 560px;
+	// 	background-color: #1c3374;
+	// 	margin-top: 50px;
+	// 	height: 242px;
+	// 	box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
+	// 	&__inner {
+	// 		margin: 62px auto;
+	// 		display: flex;
+	// 		align-items: flex-start;
+	// 		width: 100%;
+	// 		max-width: 436px;
+	// 	}
 
-		.reply__content {
-			font-weight: 400;
-			font-size: 16px;
-			line-height: 140%;
-			color: #fff;
-			margin-top: 16px;
-		}
+	// 	.reply__title {
+	// 		font-weight: 700;
+	// 		font-size: 20px;
+	// 		line-height: 100%;
+	// 		color: #fff;
+	// 		margin-block-start: 0;
+	// 		margin-block-end: 0;
+	// 	}
 
-		.reply__text{
-			margin-left: 29px;
-		}
+	// 	.reply__content {
+	// 		font-weight: 400;
+	// 		font-size: 16px;
+	// 		line-height: 140%;
+	// 		color: #fff;
+	// 		margin-top: 16px;
+	// 	}
+
+	// 	.reply__text{
+	// 		margin-left: 29px;
+	// 	}
+	// }
+
+	.swiper-button-next{
+		content: url('assets/shevron_right.svg');
+	}
+	.swiper-button-prev{
+		content: url('assets/shevron_left.svg');
 	}
 
 }
