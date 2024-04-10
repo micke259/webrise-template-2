@@ -1,37 +1,49 @@
+@import './fonts.scss';
+
 .container-2 {
 	width: 100%;
 	margin: 0 auto;
 	max-width: 1160px;
 	min-height: 700px;
-	display: grid;
-	background-image: url('assets/zal.jpg');
-	background-repeat: no-repeat;
-	background-position: right 40%;
+	position: relative;
+	display: flex;
+
+	.gym__image{
+		width: 100%;
+		max-width: 660px;
+		height: 401px;
+		align-self: center;
+		margin-top: -220px;
+	}
 
 	.player{
 		width: 364px;
 		height: 228px;
 		flex-shrink: 0;
 		z-index: 1;
-		align-self: center;
-		justify-self: center;
-		margin-top: -258px;
-		margin-left: 75px;
+		position: absolute;
+		top: 58.1%;
+		left: 437px
 	}
 	.training {
 		display: flex;
-		flex-direction: column;
-		margin-top: 160px;
-		margin-left: 59px;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 162px;
+		&__inner{
+			margin-left: 60px;
+		}
 	}
 
 	.training__title {
-		font-family: 'Bebas Neue', sans-serif;
+		font-family: $bebas-neue;
 		font-weight: 700;
 		font-size: 49px;
 		letter-spacing: 0.03em;
 		color: #102654;
-		font-stretch: 50%;
+		margin-block-start: 0;
+		margin-block-end: 0;
 	}
 
 	.training__subtitle {
@@ -60,6 +72,48 @@
 	}
 }
 
+@media (max-width:1100px) {
+	.container-2{
+		.training{
+			flex-direction: column;
+			align-items: center;
+			&__inner{
+				max-width: 502px;
+				margin: 0 auto;
+			}
+
+			&__title{
+				text-align: center;
+			}
+			&__subtitle{
+				text-align: center;
+			}
+		}
+
+		.player{
+			top: 85%;
+			left: 35%;
+			width: 266px;
+			height: 167px;
+		}
+
+		.gym__image{
+			margin-top: 50px;
+			max-width: 678px;
+			height: 345px;
+		}
+
+		.gym__text{
+			width: 100%;
+			text-align: center;
+			&-2{
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}
+
 @media (max-width:768px) {
 
 	.container-2{
@@ -72,7 +126,6 @@
 		.gym__text, .gym__text-2{
 			width: 100%;
 			max-width: 502px;
-			margin-bottom: 60rem;
 		}
 
 		.gym__text-2{

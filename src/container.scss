@@ -5,7 +5,6 @@
 	max-width: 1160px;
 	margin: 0 auto;
 	min-height: 658px;
-
 	.man__picture{
 		margin-top: -15px;
 		margin-left: 84px;
@@ -81,23 +80,41 @@
 		align-items: center;
 		position: relative;
 
-		.subtitle {
-			width: 100%;
-			max-width: 113px;
-			font-weight: 400;
-			font-size: 14px;
-			line-height: 150%;
-			text-align: right;
-			color: #fff;
-			margin-top: 99px;
-			margin-left: 18px;
+
+
+		.bruh-text{
+			&__wrapper{
+				display: flex;
+				align-items: center;
+				width: 100%;
+				justify-content: flex-end;
+				gap: 30px;
+			}
+			&__title{
+				font-family: $bebas-neue;
+				font-weight: 400;
+				font-style: normal;
+				font-size: 109px;
+				text-align: right;
+				color: #fff;
+				text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+			}
+			&__subtitle {
+				width: 100%;
+				max-width: 113px;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 150%;
+				text-align: right;
+				color: #fff;
+			}
 		}
 
 		.blockquote {
 			display: flex;
 			flex-direction: column;
 			width: 100%;
-			max-width: 298px;
+			max-width: 400px;
 			align-items: flex-end;
 			margin-bottom: 88px;
 			margin-left: -53px;
@@ -111,7 +128,7 @@
 			}
 
 			.name {
-				font-family: "Bebas Neue", sans-serif;
+				font-family: $bebas-neue;
 				font-weight:400;
 				font-style: normal;
 				font-size: 109px;
@@ -131,53 +148,37 @@
 	}	
 }
 
-@media (max-width: 768px)  {
+@media (max-width:768px) {
 	.container{
-		
-		.blockquote__container{
+		.text__container{
+
+
 			.blockquote{
-				.location {
-					font-weight: 400;
+				.location{
 					font-size: 34px;
-					letter-spacing: 0.03em;
-					color: #fff;
-					margin-right: 160px;
 				}
 				.name{
-					font-weight: 700;
 					font-size: 86px;
-					letter-spacing: 0.03em;
-					text-align: right;
-					color: #fff;
-					margin-right: 160px;
 				}
+
 				.abonement__button{
 					max-width: 183px;
-					margin-right: 160px;
+				}
+
+				.bruh-text{
+					&__title{
+						font-size: 86px;
+					}
 				}
 			}
 		}
 	}
 }
 
-@media (max-width:320px){
+@media (max-width:600px) {
 	.container{
-		background-image: none;
-		.blockquote__container{
-			.blockquote{
-				margin-left: 70px;
-				.location{
-					margin-right: 0px;
-				}
-
-				.name{
-					margin-right: 0px;
-				}
-				.abonement__button{
-					margin-right: 0;
-					max-width: 100%;
-				}
-			}
+		.man__picture{
+			display: none;
 		}
 	}
 }

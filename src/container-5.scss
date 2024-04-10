@@ -1,6 +1,7 @@
 @import './fonts.scss';
 
 .container-5 {
+	padding: 0 45px;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1272px;
@@ -16,51 +17,95 @@
 		width: 100%;
 		height: auto;
 		margin-top: 45px;
+		&__slide{
+			display: flex;
+			justify-content: center;
+		}
+
+		&__wrapper{
+			padding-left: 25px;
+			padding-right: 45px;
+		}
+
 		&__item{
-			text-align: center;
+			display: flex;
+			justify-content: center;
 			width: 100%;
-			height: 100%;
-
-
-			&__props{
-				width: 100%;
-				height: 294px;
-				background-image: url('assets/photo.jpg');
-				background-repeat: no-repeat;
-				background-position: 97%;
-				display: flex;
-				justify-content: center;
-				align-items: flex-end;
-
-				&:hover{
-					filter: blur(5px)
+			max-width: 260px;
+			height: 294px;
+			position: relative;
+			&:hover{
+				.coaches__list__item__title{
+					display: none;
 				}
 
-				p{
-					margin-left: 52px;
-					margin-bottom: 23px;
-					color: #fff;
-					font-size: 18px;
-					font-weight: 700;
-					line-height: 150%;
-					letter-spacing: 0%;
-					text-align: center;
-				}
-				&-1{
-					background-image: url('assets/photo_2.jpg');
-					margin-left: -20px;
-				}
-
-				&-2{
-					background-image: url('assets/photo_3.png');
-					margin-left: -38px;
-				}
-				&-3{
-					background-image: url('assets/photo_4.jpg');
-					margin-left: -55px;
+				.coaches__list__item__props{
+					visibility: visible;
+					opacity: 1;
 				}
 			}
 
+			&__title {
+				
+				z-index: 1;
+				font-size: 18px;
+				color: #fff;
+				align-self: flex-end;
+				margin-bottom: 25px;
+			}
+
+			&__props{
+				width: 100%;
+				height: 100%;
+				background-color:rgba(16, 38, 84, 0.89);
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				visibility: hidden;
+				opacity: 0;
+				transition: visibility 0s, opacity .3s ease;
+				&__title{
+					top: 58px;
+					position: absolute;
+					color: #fff;
+					margin-block-start: 0;
+					margin-block-end: 0;
+					font-family: $roboto-condensed;
+					font-weight: 700;
+					font-size: 18px;
+				}
+
+				&__subtitle{
+					top: 80px;
+					position: absolute;
+					font-weight: 400;
+					font-size: 16px;
+					color: #b6bdcc;
+				}
+
+				&__list{
+					display: flex;
+					flex-direction: column;
+					gap: 24px;
+					color: #fff;
+					position: absolute;
+					top: 115px;
+					&__item{
+						font-size: 18px;
+						width: 100%;
+						max-width: 143px;
+						&__text{
+							font-family: $roboto-condensed;
+							font-weight: 400;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+			img{
+				position: absolute;
+				z-index: 0;
+			}
 		}
 	}
 	.swiper-button-prev{

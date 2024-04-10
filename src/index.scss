@@ -3,14 +3,16 @@
 html,
 body {
 	font-family: $roboto-condensed;
-	position: relative;
-	height: 100%;
+
+}
+
+*{
+	box-sizing: border-box;
+	padding: 0;
 }
 
 body {
 	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
 	
 }
 
@@ -26,18 +28,38 @@ p {
 	margin: 0 auto;
 	background-image: url('assets/bg-container-1.jpg');
 	background-repeat: no-repeat;
+	padding: 0 45px;
 }
+
+
 
 .container-3-wrapper {
 	margin-top: 57px;
 	width: 100%;
 	background-color: #F8F9FC;
+	padding: 0 45px;
 }
 
 .container-6-wrapper {
 	width: 100%;
 	background-color: #F8F9FC;
 	margin-top: 200px;
+	padding: 0 45px;
+}
+
+@media (max-width:900px) {
+	.container-wrapper, .container-3-wrapper, .container-3-wrapper{
+		padding: 0 25px
+	}
+}
+
+@media (max-width:640px) {
+
+	.container-wrapper,
+	.container-3-wrapper,
+	.container-3-wrapper {
+		padding: 0 10px
+	}
 }
 
 

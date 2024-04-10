@@ -9,7 +9,7 @@
 	align-items: center;
 	margin-top: 110px;
 	position: relative;
-	
+	padding: 0 45px;
 
 	&__title {
 		font-family: $bebas-neue;
@@ -23,50 +23,110 @@
 
 	.replies{
 		height: 242px;
+		width: 100%;
+
+		
+
+		&__slide{
+			display: flex;
+			justify-content: center;
+			
+		}
+		&__item{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #1c3374;
+			width: 100%;
+			max-width: 560px;
+			box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
+		}
+
+		&__inner{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			max-width: 436px;
+
+			&__title{
+				display: none;
+			}
+		}
+
+		.reply{
+			&__title {
+					font-weight: 700;
+					font-size: 20px;
+					line-height: 100%;
+					color: #fff;
+					margin-block-start: 0;
+					margin-block-end: 0;
+				}
+			
+			&__content {
+					font-weight: 400;
+					font-size: 16px;
+					line-height: 140%;
+					color: #fff;
+					margin-top: 16px;
+				}
+			
+			&__text {
+					margin-left: 29px;
+				}
+		}
 	}
 
-	// .replies {
-	// 	width: 100%;
-	// 	max-width: 560px;
-	// 	background-color: #1c3374;
-	// 	margin-top: 50px;
-	// 	height: 242px;
-	// 	box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
-	// 	&__inner {
-	// 		margin: 62px auto;
-	// 		display: flex;
-	// 		align-items: flex-start;
-	// 		width: 100%;
-	// 		max-width: 436px;
-	// 	}
 
-	// 	.reply__title {
-	// 		font-weight: 700;
-	// 		font-size: 20px;
-	// 		line-height: 100%;
-	// 		color: #fff;
-	// 		margin-block-start: 0;
-	// 		margin-block-end: 0;
-	// 	}
-
-	// 	.reply__content {
-	// 		font-weight: 400;
-	// 		font-size: 16px;
-	// 		line-height: 140%;
-	// 		color: #fff;
-	// 		margin-top: 16px;
-	// 	}
-
-	// 	.reply__text{
-	// 		margin-left: 29px;
-	// 	}
-	// }
-
-	.swiper-button-next{
+	.advert-button-next{
 		content: url('assets/shevron_right.svg');
 	}
-	.swiper-button-prev{
+	.advert-button-prev{
 		content: url('assets/shevron_left.svg');
 	}
 
+}
+
+@media (max-width:660px) {
+	.container-8{
+		.replies{
+			height: 335px;
+			&__item{
+				max-width: 226px;
+				
+			}
+			&__inner{
+				flex-direction: column;
+				&__wrapper{
+					display: flex;
+					gap: 10px;
+					align-items: center;
+				}
+				&__title{
+					display: block;
+					margin-block-start: 0;
+					margin-block-end: 0;
+					color: #fff;
+					width: 60px;
+				}
+			}
+
+			.reply{
+				&__title{
+					display: none;
+				}
+				
+				&__text{
+					margin-left: 0;
+					width: 100%;
+					max-width: 176px;
+				}
+
+				&__content{
+					font-size: 16px;
+				}
+			}
+		}
+	}
 }
