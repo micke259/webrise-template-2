@@ -38,6 +38,7 @@
 		&__inner {
 			width: 100%;
 			margin: 65px auto;
+			padding: 0 10px;
 			max-width: 410px;
 		}
 
@@ -78,11 +79,15 @@
 		max-width: 683px;
 		border-top: 1px solid #74819c;
 
+
 		&__inner {
 			width: 100%;
 			max-width: 404px;
-			margin: 65px auto;
-
+			display: flex;
+			flex-direction: column;
+			margin: 0 auto;
+			margin-top: 25px;
+			padding: 0 10px;
 		}
 
 		&__title {
@@ -94,9 +99,22 @@
 		}
 
 		&__props {
-			margin-top: 42px;
+		
 			display: flex;
 			gap: 60px;
+
+			&__first{
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+				width: 100%;
+			}
+
+			&__second{
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+			}
 
 			&__title {
 				font-weight: 700;
@@ -132,7 +150,7 @@
 
 @media (max-width:768px) {
 	.container-9{
-		padding: 0;
+		padding: 0 25px;
 		flex-direction: column;
 		.free{
 			max-width: 100%;
@@ -140,8 +158,10 @@
 	}
 }
 
-@media (max-width:320px) {
+@media (max-width:440px) {
 	.container-9{
+		margin-top: 0;
+		padding: 120px 10px;
 		.free {
 
 			&__title{

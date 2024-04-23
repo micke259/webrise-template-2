@@ -5,12 +5,12 @@
 	max-width: 1369px;
 	margin: 0 auto;
 	min-height: 851px;
-
+	padding: 100px 0;
 	display: grid;
 	grid-template-rows: 0.25fr 0.25fr 1fr;
 	grid-template-columns: 1fr;
 
-	position: relative;
+	
 
 	.dude{
 		position: absolute;
@@ -45,7 +45,8 @@
 			flex-direction: row;
 			gap: 0 46px;
 			height: 44px;
-
+			position: relative;
+			border-bottom: 2px solid rgba(120,120,120, .2);
 			&__item {
 				position: relative;
 				font-family: $roboto-condensed;
@@ -58,17 +59,32 @@
 
 			}
 
-			&__item>input[type="radio"] {
-				display: none;
+			&-button{
+				font-family: $roboto-condensed;
+				background-color: transparent;
+				border: none;
+				font-weight: 400;
+				font-size: 20px;
+				color: rgba(16, 38, 84, 0.5);
+
+				&-active{
+					font-family: $roboto-condensed;
+					background-color: transparent;
+					border: none;
+					font-weight: 400;
+					font-size: 20px;
+					color: rgba(16, 38, 84, 1);
+				}
 			}
-			#tab-btn-1:checked~label {
-				border-bottom: 2px solid #D10A42;
-			}
-			#tab-btn-2:checked~label {
-				border-bottom: 2px solid #D10A42;
-			}
-			#tab-btn-3:checked~label {
-				border-bottom: 2px solid #D10A42;
+
+			&-line{
+				position: absolute;
+				top: 42px;
+				left: 0;
+				width: 67px;
+				height: 2px;
+				background-color: #d10a42;
+				transition: all .25s ease-in-out;
 			}
 
 
@@ -92,6 +108,14 @@
 			background-color: #fff;
 
 			z-index: 2;
+
+			&-wrapper{
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				flex-grow: 1;
+			}
 
 			border: 6px solid #fff;
 			&:hover {
@@ -124,7 +148,7 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				margin-top: 80px;
+				
 
 				svg {
 					margin-left: 14px;
@@ -145,11 +169,11 @@
 				height: 64px;
 				width: 100%;
 				max-width: 206px;
-				border: 3px solid #102654;
+				border: 3px solid #1c3374;
 				background-color: transparent;
 				color: #102654;
 				transition: all 0.3s ease;
-
+				margin-bottom: 68px;
 				&:hover {
 					cursor: pointer;
 					background: linear-gradient(0.25turn, #ED0233, #003EB7);
@@ -195,6 +219,14 @@
 	.container-3{
 		.dude{
 			display: none;
+		}
+
+		.abonement__selector__wrapper{
+			.abonement__selector{
+				&-button{
+					font-size: 16px;
+				}
+			}
 		}
 	}
 }

@@ -4,24 +4,96 @@
 	width: 100%;
 	max-width: 1160px;
 	margin: 0 auto;
-	min-height: 658px;
-	.man__picture{
-		margin-top: -15px;
-		margin-left: 84px;
-	}
+	position: relative;
 
-	.icons__list{
-		display: none;
-		list-style-type: none;
+	&__icons-list{
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 24px;
+		align-items: center;
+		width: 13px;
 		position: absolute;
-		width: 14px;
-		left: 1148px;
-		right: 0px;
-		top: 396px;
-		.icons__list__item{
-			margin-top: 15px;
+		right: 0;
+		bottom: 0;
+
+		&__item>a{
+			transition: opacity .3s ease;
+			&:hover{
+				opacity: .5;
+			}
 		}
 	}
+
+	.man__picture{
+		
+		&-wrapper{
+			width: 100%;
+			max-width: 500px;
+		}
+
+	}
+
+	&__inner{
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+		max-width: 944px;
+		gap: 64px;
+		&-wrapper{
+			width: 100%;
+			max-width: 380px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: center;
+			position: sticky ;
+		}
+
+		&-title{
+			font-family: $bebas-neue;
+			margin-block-start: 0;
+			margin-block-end: 0;
+			font-weight: 400;
+			font-size: 49px;
+			letter-spacing: 0.03em;
+			color: #fff;
+			text-align: right;
+		}
+
+		&__text-wrapper{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+
+		&-text{
+			max-width: 298px;
+			width: 100%;
+			font-family: $bebas-neue;
+			font-weight: 700;
+			font-size: 109px;
+			letter-spacing: 0.03em;
+			text-align: right;
+			color: #fff;
+	
+		}
+
+		&-subtext{
+			margin-top: -85px;
+			margin-right: 255px;
+			max-width: 113px;
+			width: 100%;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 150%;
+			text-align: right;
+			color: #fff;
+		}
+	}
+
 	.abonement__button {
 		background-color: transparent;
 		border: 4px solid #fff;
@@ -34,8 +106,8 @@
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		color: #fff;
-
-		font-family: 'Roboto Condensed', sans-serif;
+		margin-top: 80px;
+	
 		transition: opacity 0.3s ease;
 		&:hover{
 			opacity: 0.5;
@@ -44,7 +116,7 @@
 
 	.header {
 		width: 100%;
-		padding-top: 25px;
+		
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -73,112 +145,78 @@
 		}
 	}
 
-	.text__container {
-		width: 100%;
-		display: flex;
-		min-height: 570px;
-		align-items: center;
-		position: relative;
+}
 
-
-
-		.bruh-text{
-			&__wrapper{
-				display: flex;
-				align-items: center;
-				width: 100%;
-				justify-content: flex-end;
-				gap: 30px;
-			}
-			&__title{
-				font-family: $bebas-neue;
-				font-weight: 400;
-				font-style: normal;
-				font-size: 109px;
-				text-align: right;
-				color: #fff;
-				text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
-			}
-			&__subtitle {
-				width: 100%;
-				max-width: 113px;
-				font-weight: 400;
-				font-size: 14px;
-				line-height: 150%;
-				text-align: right;
-				color: #fff;
-			}
-		}
-
-		.blockquote {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			max-width: 400px;
-			align-items: flex-end;
-			margin-bottom: 88px;
-			margin-left: -53px;
-			.location {
-				font-family: $bebas-neue;
-				font-weight: 400;
-				font-size: 49px;
-				letter-spacing: 0.03em;
-				color: #fff;
-				margin-top: 98px;
-			}
-
-			.name {
-				font-family: $bebas-neue;
-				font-weight:400;
-				font-style: normal;
-				font-size: 109px;
-				text-align: right;
-				color: #fff;
-				text-shadow: 0 4px 4px rgba(0,0,0,0.25)
-			}
+@media (max-width:1100px) {
+	.container{
+		&__icons-list{
+			display: none;
 		}
 	}
 }
 
 @media (max-width:1000px) {
 	.container{
-		.man__picture{
-			margin-left: auto;
+		&__inner{
+			margin-top: 25px;
+			gap: 30px;
 		}
-	}	
+	}
 }
 
-@media (max-width:768px) {
+@media (max-width:869px) {
 	.container{
-		.text__container{
+		&__inner{
 
+			&-title{
+				font-size: 34px;
+			}
 
-			.blockquote{
-				.location{
-					font-size: 34px;
-				}
-				.name{
-					font-size: 86px;
-				}
+			&-text{
+				font-size: 86px;
+			}
 
-				.abonement__button{
-					max-width: 183px;
-				}
-
-				.bruh-text{
-					&__title{
-						font-size: 86px;
-					}
-				}
+			&-subtext{
+				margin-top: -75px;
+				margin-right: 205px;
 			}
 		}
 	}
 }
 
-@media (max-width:600px) {
+@media (max-width:700px) {
 	.container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+		&__inner{
+			grid-template-columns: 1fr;
+			justify-items: center;
+			align-self: center;
+		}
 		.man__picture{
 			display: none;
+		}
+	}
+}
+
+@media (max-width:340px) {
+	.container{
+		&__inner{
+			&-title{
+				font-size: 28px;
+			}
+			&-text{
+				font-size: 78px;
+			}
+			&-subtext{
+				margin-right: 175px;
+			}
+			.abonement__button{
+				max-width: 100%;
+				margin-top: 40px;
+			}
 		}
 	}
 }

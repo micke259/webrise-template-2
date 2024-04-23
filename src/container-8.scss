@@ -81,9 +81,11 @@
 
 	.advert-button-next{
 		content: url('assets/shevron_right.svg');
+		top:var(--swiper-navigation-top-offset, 60%);
 	}
 	.advert-button-prev{
 		content: url('assets/shevron_left.svg');
+		top: var(--swiper-navigation-top-offset, 60%);
 	}
 
 }

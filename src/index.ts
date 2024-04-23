@@ -9,8 +9,8 @@ import Inputmask from 'inputmask';
 
 
 
-const tabs = document.querySelectorAll('input[name="tab-btn"]')
-const month = document.getElementsByClassName("abonement__selector__item__tab")
+const tabs = document.querySelectorAll('.abonement__selector-button')
+
 const priceTags = document.querySelectorAll(".courses__list__item__price__title")
 
 const priceValues = Array.from(priceTags).map(tag => parseInt(tag.textContent));
@@ -18,9 +18,18 @@ const priceValues_2 = Array.from(priceTags).map(tag => parseInt(tag.textContent)
 const priceValues_3 = Array.from(priceTags).map(tag => parseInt(tag.textContent)*7);
 
 
+
 tabs.forEach((tab, index) => {
-	tab.addEventListener("change", () => {
-		const months = parseInt(month[index].textContent)
+	tab.addEventListener("click", (e) => {
+		tabs.forEach((tab2) => {tab2.setAttribute("class", "abonement__selector-button")});
+		tab.setAttribute("class", "abonement__selector-button-active");
+
+		const line = document.querySelector<HTMLDivElement>(".abonement__selector-line")
+		if (line && e.target instanceof HTMLElement) {
+			line.style.width = e.target.offsetWidth + "px";
+			line.style.left = e.target.offsetLeft + "px";
+		}
+		const months = parseInt(tabs[index].textContent)
 			switch (months) {
 				case 1:
 					priceTags.forEach((tag, index) =>{
@@ -40,6 +49,8 @@ tabs.forEach((tab, index) => {
 			}
 		
 	})
+
+
 })
 
 
@@ -50,6 +61,8 @@ const CoachesParams:SwiperOptions = {
 		nextEl: '.swiper-button-next',
     	prevEl: '.swiper-button-prev',
   	},
+
+	spaceBetween: 40,
 	breakpoints:{
 		1024:{
 			slidesPerView:4,
@@ -97,4 +110,17 @@ const replies = new Swiper('.replies', RepliesParams)
 
 const phoneInput = document.querySelector<HTMLInputElement>('.free__inner__input[type="text"][placeholder="Телефон"]');
 
-Inputmask({ mask: '+7 (999) 999-99-99' }).mask(phoneInput);
+const phoneMask = Inputmask({ mask: '+7 (999) 999-99-99' }).mask(phoneInput);
+
+const form = document.querySelector<HTMLFormElement>(".free")
+
+form.addEventListener("submit", (e) => {
+
+	if(!phoneMask.isComplete()) {
+		e.preventDefault();
+
+		alert("Пожалуйста, введите корректный номер телефона");
+	}else{
+		form.reset()
+	}
+})

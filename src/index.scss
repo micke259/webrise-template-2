@@ -28,28 +28,34 @@ p {
 	margin: 0 auto;
 	background-image: url('assets/bg-container-1.jpg');
 	background-repeat: no-repeat;
-	padding: 0 45px;
+	padding: 25px 45px;
 }
 
 
 
 .container-3-wrapper {
-	margin-top: 57px;
 	width: 100%;
 	background-color: #F8F9FC;
 	padding: 0 45px;
+	position: relative;
 }
 
 .container-6-wrapper {
 	width: 100%;
 	background-color: #F8F9FC;
-	margin-top: 200px;
-	padding: 0 45px;
+	
+	padding: 120px 45px;
 }
 
 @media (max-width:900px) {
-	.container-wrapper, .container-3-wrapper, .container-3-wrapper{
+	.container-wrapper{
+		padding: 25px;
+	}
+	 .container-3-wrapper{
 		padding: 0 25px
+	}
+	.container-6-wrapper{
+		padding: 120px 25px;
 	}
 }
 
@@ -57,7 +63,7 @@ p {
 
 	.container-wrapper,
 	.container-3-wrapper,
-	.container-3-wrapper {
+	.container-6-wrapper {
 		padding: 0 10px
 	}
 }
