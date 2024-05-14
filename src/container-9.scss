@@ -139,7 +139,7 @@
 			&__divider {
 				width: 100%;
 				width: 1px;
-				height: 102px;
+				height: 129px;
 				border: 1px solid #74819c;
 
 			}
@@ -151,6 +151,7 @@
 @media (max-width:768px) {
 	.container-9{
 		padding: 0 25px;
+		padding-bottom: 50px;
 		flex-direction: column;
 		.free{
 			max-width: 100%;

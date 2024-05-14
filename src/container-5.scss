@@ -111,7 +111,7 @@
 		}
 	}
 	.swiper-button-prev{
-		left: 0;
+		
 		color: #AFAFAF;
 		content: url('assets/shevron_left.svg');
 		width: 16px;
@@ -120,8 +120,20 @@
 
 	.swiper-button-next{
 		width: 16px;
-		right: 0;
+		
 		color: #AFAFAF;
 		content: url('assets/shevron_right.svg');
+	}
+}
+
+
+@media (max-width:1200px) {
+	.container-5{
+		.swiper-button-prev{
+			left: var(--swiper-navigation-sides-offset, 20px);
+		}
+		.swiper-button-next{
+			right: var(--swiper-navigation-sides-offset, 20px);
+		}
 	}
 }

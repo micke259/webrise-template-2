@@ -111,7 +111,7 @@
 		}
 
 		.gym__image{
-			margin-top: 50px;
+			
 			max-width: 678px;
 			height: 345px;
 		}
@@ -130,9 +130,10 @@
 @media (max-width:768px) {
 
 	.container-2{
-		padding: 120px 25px;
+		padding: 0 25px;
+		padding-bottom: 120px;
 		.training{
-			margin-top: 100px;
+			margin-top: 0px;
 			margin-right: auto;
 			margin-left: auto;
 			text-align: center;
@@ -149,9 +150,37 @@
 	
 }
 
+@media (max-width:500px) {
+	.container-2{
+		padding: 0;
+		padding-top: 50px;
+		padding-bottom: 200px;
+		.training{
+			padding: 0 25px;
+		}
+		.gym__image{
+			width: 100%;
+			max-width: 500px;
+			&__wrapper{
+				max-width: 100%;
+			}
+		}
+
+		.player{
+			max-width: 100%;
+			bottom: -80%;
+			top: 110%;
+			img{
+				width: 100%;
+				height: 167px;
+			}
+		}
+	}
+}
+
 @media (max-width:320px) {
 	.container-2{
-		padding: 120px 10px;
+		
 		display: block;
 		.training{
 			text-align: start;
@@ -165,8 +194,6 @@
 		.gym__text{
 			max-width: 320px;
 		}
-		.player{
-			margin-left: 0px;
-		}
+
 	}
 }

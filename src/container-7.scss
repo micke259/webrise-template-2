@@ -158,6 +158,16 @@
 			flex-direction: row;
 			&__inner{
 				margin-left: 0;
+				height: initial;
+				padding: 10px 5px;
+			}
+
+			&__title{
+				line-height: 100%;
+			}
+
+			&__subtitle{
+				margin-top: 15px;
 			}
 		}
 	}
